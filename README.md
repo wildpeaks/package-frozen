@@ -1,5 +1,7 @@
 # Frozen utilities
 
+[![Build Status](https://travis-ci.org/wildpeaks/package-frozen.svg?branch=master)](https://travis-ci.org/wildpeaks/package-frozen)
+
 Javascript functions to **manipulate [frozen](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) arrays and objects**.
 
 All functions leave the original Array/Object untouched, and return a new frozen Array/Object with the modification.
