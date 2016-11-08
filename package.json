@@ -1,0 +1,33 @@
+{
+  "name": "@wildpeaks/frozen",
+  "version": "1.0.0",
+  "description": "Manipulate frozen Arrays and Objects",
+  "main": "src/frozen.js",
+  "files": [
+    "src/frozen.js",
+    "test/arrayPush.tests.js",
+    "test/arrayRemove.tests.js",
+    "test/arrayUniquePush.tests.js",
+    "test/arrayUniqueRemove.tests.js",
+    "test/objectSet.tests.js",
+    "test/objectUnset.tests.js"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "https://github.com/wildpeaks/package-frozen",
+  "keywords": [
+    "wildpeaks",
+    "frozen",
+    "immutable"
+  ],
+  "author": "Cecile Muller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/package-frozen/issues"
+  },
+  "homepage": "https://github.com/wildpeaks/package-frozen#readme",
+  "devDependencies": {
+  	"mocha": "latest"
+  }
+}
