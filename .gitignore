@@ -11,17 +11,20 @@
 # But allow those files and folders:
 #-----------------------------------------------------------------------------#
 
-!LICENSE
-!README.md
-!*.sublime-project
-!.editorconfig
-!.gitattributes
-!.gitignore
-!.travis.yml
+!/LICENSE
+!/README.md
+!/.editorconfig
+!/.gitattributes
+!/.gitignore
+!/.travis.yml
+!/.vscode
 !/src
 !/test
+!/helper.typescript.js
 !/package.json
-
+!/package-lock.json
+!/tsconfig.json
+!/wallaby.js
 
 #-----------------------------------------------------------------------------#
 # But make sure to ignore those regardless:

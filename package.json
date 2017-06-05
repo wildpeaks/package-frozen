@@ -1,23 +1,20 @@
 {
   "name": "@wildpeaks/frozen",
-  "version": "1.0.0",
-  "description": "Manipulate frozen Arrays and Objects",
-  "main": "src/frozen.js",
+  "version": "2.0.0-rc.0",
+  "description": "Manipulate frozen Arrays",
+  "main": "src/frozen.ts",
+  "typings": "src/frozen.ts",
   "files": [
-    "src/frozen.js",
-    "test/arrayPush.tests.js",
-    "test/arrayRemove.tests.js",
-    "test/arrayUniquePush.tests.js",
-    "test/arrayUniqueRemove.tests.js",
-    "test/objectSet.tests.js",
-    "test/objectUnset.tests.js"
+    "src",
+    "test"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "jasmine --helper=helper.typescript.js test/*.spec.ts"
   },
   "repository": "https://github.com/wildpeaks/package-frozen",
   "keywords": [
     "wildpeaks",
+    "typescript",
     "frozen",
     "immutable"
   ],
@@ -27,7 +24,14 @@
     "url": "https://github.com/wildpeaks/package-frozen/issues"
   },
   "homepage": "https://github.com/wildpeaks/package-frozen#readme",
+  "peerDependencies": {
+    "typescript": "*"
+  },
   "devDependencies": {
-  	"mocha": "latest"
+    "@types/jasmine": "2.5.51",
+    "@types/node": "7.0.27",
+    "jasmine": "2.6.0",
+    "ts-node": "3.0.4",
+    "typescript": "2.3.4"
   }
 }
