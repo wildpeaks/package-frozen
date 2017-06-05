@@ -6,7 +6,8 @@
 .gitignore      text
 LICENSE         text
 README          text
-*.txt           text
 *.md            text
+*.txt           text
+*.ts            text
 *.js            text
 *.json          text
