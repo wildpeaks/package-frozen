@@ -1,6 +1,6 @@
 {
   "name": "@wildpeaks/frozen",
-  "version": "2.0.0-rc.0",
+  "version": "2.0.0",
   "description": "Manipulate frozen Arrays",
   "main": "src/frozen.ts",
   "typings": "src/frozen.ts",
