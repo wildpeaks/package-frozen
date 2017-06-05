@@ -28,7 +28,7 @@ function arrayPush<T>(frozenArray: ReadonlyArray<T>, newValue: T): ReadonlyArray
 Example:
 
 ````ts
-import arrayPush from '@wildpeaks/frozen';
+import {arrayPush} from '@wildpeaks/frozen';
 
 type MyArray = ReadonlyArray<string | number>;
 const srcArray: MyArray = Object.freeze(['zero', 111, 'TWO']);
@@ -55,7 +55,7 @@ function arrayRemove<T>(frozenArray: ReadonlyArray<T>, index: number): ReadonlyA
 Example:
 
 ````ts
-import arrayRemove from '@wildpeaks/frozen';
+import {arrayRemove} from '@wildpeaks/frozen';
 
 type MyArray = ReadonlyArray<string | number>;
 const srcArray: MyArray = Object.freeze(['zero', 111, 'TWO']);
@@ -83,7 +83,7 @@ function arrayUniquePush<T>(frozenArray: ReadonlyArray<T>, newValue: T): Readonl
 Example (the Array doesn't contain the value):
 
 ````ts
-import arrayUniquePush from '@wildpeaks/frozen';
+import {arrayUniquePush} from '@wildpeaks/frozen';
 
 type MyArray = ReadonlyArray<string | number>;
 const srcArray: MyArray = Object.freeze(['zero', 111, 'TWO']);
@@ -97,7 +97,7 @@ const newArray: MyArray = arrayUniquePush(srcArray, 333);
 Example (the Array already contains the value):
 
 ````ts
-import arrayUniquePush from '@wildpeaks/frozen';
+import {arrayUniquePush} from '@wildpeaks/frozen';
 
 type MyArray = ReadonlyArray<string | number>;
 const srcArray: MyArray = Object.freeze(['zero', 111, 'TWO']);
@@ -125,7 +125,7 @@ function arrayUniqueRemove<T>(frozenArray: ReadonlyArray<T>, value: T): Readonly
 Example:
 
 ````ts
-import arrayUniqueRemove from '@wildpeaks/frozen';
+import {arrayUniqueRemove} from '@wildpeaks/frozen';
 
 type MyArray = ReadonlyArray<string | number>;
 const srcArray: MyArray = Object.freeze(['zero', 111, 'TWO']);
