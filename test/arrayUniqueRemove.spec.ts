@@ -1,3 +1,4 @@
+/* eslint-env node, jasmine */
 import {arrayUniqueRemove} from '../src/frozen';
 
 describe('arrayUniqueRemove', () => {

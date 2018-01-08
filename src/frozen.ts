@@ -1,3 +1,5 @@
+/* eslint-env shared-node-browser */
+/* eslint-disable indent */
 
 /**
  * Clones an array, and adds a single value at the end.
