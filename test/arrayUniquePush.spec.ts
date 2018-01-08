@@ -1,3 +1,4 @@
+/* eslint-env node, jasmine */
 import {arrayUniquePush} from '../src/frozen';
 
 describe('arrayUniquePush', () => {
