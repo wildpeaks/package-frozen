@@ -16,14 +16,16 @@
 !/.editorconfig
 !/.gitattributes
 !/.gitignore
+!/.npmrc
 !/.travis.yml
 !/.vscode
 !/src
 !/test
-!/helper.typescript.js
+!/jasmine.typescript.js
+!/tsconfig.json
 !/package.json
 !/package-lock.json
-!/tsconfig.json
+!/wallaby.js
 !/wallaby.js
 
 #-----------------------------------------------------------------------------#

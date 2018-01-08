@@ -1,13 +1,11 @@
-
 * -text
 
 .editorconfig   text
 .gitattributes  text
 .gitignore      text
 LICENSE         text
-README          text
 *.md            text
-*.txt           text
-*.ts            text
 *.js            text
+*.ts            text
 *.json          text
+*.yml           text
