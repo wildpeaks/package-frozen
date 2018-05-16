@@ -17,7 +17,6 @@
 !/.gitattributes
 !/.gitignore
 !/.npmrc
-!/.coveralls.yml
 !/.travis.yml
 !/.vscode
 !/src
@@ -25,7 +24,6 @@
 !/jasmine.typescript.js
 !/tsconfig.json
 !/package.json
-!/package-lock.json
 !/wallaby.js
 
 #-----------------------------------------------------------------------------#
