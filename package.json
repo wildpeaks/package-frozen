@@ -1,6 +1,6 @@
 {
   "name": "@wildpeaks/frozen",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Manipulate frozen Arrays",
   "eslintConfig": {
     "extends": "@wildpeaks/typescript"
@@ -30,12 +30,12 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/jasmine": "2.8.3",
-    "@types/node": "8.5.7",
-    "@wildpeaks/eslint-config-typescript": "4.3.0",
-    "eslint": "4.15.0",
-    "jasmine": "2.8.0",
-    "ts-node": "4.1.0",
-    "typescript": "2.6.2"
+    "@types/jasmine": "2.8.7",
+    "@types/node": "10.1.0",
+    "@wildpeaks/eslint-config-typescript": "4.8.0",
+    "eslint": "4.19.1",
+    "jasmine": "3.1.0",
+    "ts-node": "6.0.3",
+    "typescript": "2.8.3"
   }
 }
