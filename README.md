@@ -1,7 +1,6 @@
 # Frozen arrays utilities
 
 [![Build Status](https://travis-ci.org/wildpeaks/package-frozen.svg?branch=master)](https://travis-ci.org/wildpeaks/package-frozen)
-[![Coverage Status](https://coveralls.io/repos/github/wildpeaks/package-frozen/badge.svg?branch=master)](https://coveralls.io/github/wildpeaks/package-frozen?branch=master)
 
 Typescript functions to **manipulate [frozen](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) arrays**.
 
