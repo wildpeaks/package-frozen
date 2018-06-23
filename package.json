@@ -35,7 +35,7 @@
     "@wildpeaks/eslint-config-typescript": "4.9.0",
     "eslint": "5.0.0",
     "jasmine": "3.1.0",
-    "ts-node": "6.2.0",
+    "ts-node": "7.0.0",
     "typescript": "2.8.3"
   }
 }
