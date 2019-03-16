@@ -30,7 +30,7 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/jasmine": "3.3.9",
+    "@types/jasmine": "3.3.10",
     "@types/node": "11.11.3",
     "@wildpeaks/eslint-config-typescript": "5.2.0",
     "eslint": "5.15.1",
