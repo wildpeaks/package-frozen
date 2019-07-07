@@ -2,8 +2,6 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/wildpeaks/package-frozen.svg)](https://greenkeeper.io/)
 
-[![Build Status](https://travis-ci.org/wildpeaks/package-frozen.svg?branch=master)](https://travis-ci.org/wildpeaks/package-frozen)
-
 Typescript functions to **manipulate [frozen](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) arrays**.
 
 All functions leave the original Array untouched, and return a new frozen Array with the modification.
