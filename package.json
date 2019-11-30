@@ -11,7 +11,7 @@
     "src"
   ],
   "scripts": {
-    "test": "jasmine --helper=jasmine.typescript.js test/*.spec.ts"
+    "test": "mocha -r register.typescript.js test/*.spec.ts"
   },
   "repository": "https://github.com/wildpeaks/package-frozen",
   "keywords": [
@@ -30,6 +30,7 @@
     "typescript": "*"
   },
   "devDependencies": {
+    "@types/mocha": "5.2.7",
     "@types/node": "12.12.14",
     "@wildpeaks/eslint-config-typescript": "7.2.0",
     "eslint": "6.7.1",
