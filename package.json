@@ -10,6 +10,12 @@
   "files": [
     "src"
   ],
+  "greenkeeper": {
+    "commitMessages": {
+      "dependencyUpdate": "feat: update ${dependency}",
+      "devDependencyUpdate": "chore: update ${dependency}"
+    }
+  },
   "scripts": {
     "test": "mocha -r register.typescript.js test/*.spec.ts"
   },
