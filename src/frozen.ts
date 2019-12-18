@@ -1,6 +1,3 @@
-/* eslint-env shared-node-browser */
-/* eslint-disable indent */
-
 /**
  * Clones an array, and adds a single value at the end.
  * @param frozenArray Array to clone
@@ -17,7 +14,7 @@ export function arrayPush<T>(frozenArray: ReadonlyArray<T>, newValue: T): Readon
  * @param index The index of the value to remove
  */
 export function arrayRemove<T>(frozenArray: ReadonlyArray<T>, index: number): ReadonlyArray<T> {
-	const isValidIndex = (typeof index === 'number') && (index > -1);
+	const isValidIndex = typeof index === "number" && index > -1;
 	return isValidIndex ? Object.freeze(frozenArray.slice(0, index).concat(frozenArray.slice(index + 1))) : frozenArray;
 }
 
@@ -27,7 +24,8 @@ export function arrayRemove<T>(frozenArray: ReadonlyArray<T>, index: number): Re
  * @param newValue The value to add
  */
 export function arrayUniquePush<T>(frozenArray: ReadonlyArray<T>, newValue: T): ReadonlyArray<T> {
-	return (frozenArray.indexOf(newValue) === -1) ? arrayPush(frozenArray, newValue) : frozenArray;
+	// eslint-disable-next-line @typescript-eslint/prefer-includes
+	return frozenArray.indexOf(newValue) === -1 ? arrayPush(frozenArray, newValue) : frozenArray;
 }
 
 /**
@@ -37,5 +35,5 @@ export function arrayUniquePush<T>(frozenArray: ReadonlyArray<T>, newValue: T): 
  */
 export function arrayUniqueRemove<T>(frozenArray: ReadonlyArray<T>, value: T): ReadonlyArray<T> {
 	const index = frozenArray.indexOf(value);
-	return (index > -1) ? arrayRemove(frozenArray, index) : frozenArray;
+	return index > -1 ? arrayRemove(frozenArray, index) : frozenArray;
 }
