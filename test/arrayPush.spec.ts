@@ -1,35 +1,34 @@
 /* eslint-env node */
-import {strictEqual, deepStrictEqual} from 'assert';
-import {describe, it} from 'mocha';
-import {arrayPush} from '../src/frozen';
+import {strictEqual, deepStrictEqual} from "assert";
+import {describe, it} from "mocha";
+import {arrayPush} from "../src/frozen";
 
-
-describe('arrayPush', () => {
+describe("arrayPush", () => {
 	type MyArray = ReadonlyArray<string | number>;
 
-	it('New value', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("New value", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayPush(initial, 333);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO', 333], 'Actual added the new value');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO", 333], "Actual added the new value");
 	});
-	it('Existing value', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("Existing value", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayPush(initial, 111);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO', 111], 'Actual added the new value');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO", 111], "Actual added the new value");
 	});
-	it('NaN', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("NaN", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayPush(initial, NaN);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO', NaN], 'Actual added the new value');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO", NaN], "Actual added the new value");
 	});
 
 	//-----------------------------------------------------------------------//

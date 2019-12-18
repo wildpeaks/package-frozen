@@ -1,21 +1,29 @@
 {
   "name": "@wildpeaks/frozen",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "description": "Manipulate frozen Arrays",
+  "author": "Cecile Muller",
+  "license": "MIT",
   "eslintConfig": {
     "extends": "@wildpeaks/typescript"
   },
-  "main": "src/frozen.ts",
-  "types": "src/frozen.ts",
-  "files": [
-    "src"
-  ],
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": true,
+    "bracketSpacing": false
+  },
   "greenkeeper": {
     "commitMessages": {
       "dependencyUpdate": "feat: update ${dependency}",
       "devDependencyUpdate": "chore: update ${dependency}"
     }
   },
+  "main": "src/frozen.ts",
+  "types": "src/frozen.ts",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "test": "mocha -r register.typescript.js test/*.spec.ts"
   },
@@ -26,8 +34,6 @@
     "frozen",
     "immutable"
   ],
-  "author": "Cecile Muller",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/wildpeaks/package-frozen/issues"
   },
@@ -38,10 +44,11 @@
   "devDependencies": {
     "@types/mocha": "5.2.7",
     "@types/node": "12.12.20",
-    "@wildpeaks/eslint-config-typescript": "7.3.0",
-    "@wildpeaks/tsconfig-node": "1.1.0",
+    "@wildpeaks/eslint-config-typescript": "8.0.0-alpha7",
+    "@wildpeaks/tsconfig-node": "2.0.0-alpha2",
     "eslint": "6.7.2",
     "mocha": "6.2.2",
+    "prettier": "1.19.1",
     "ts-node": "8.5.4",
     "typescript": "3.7.3"
   }

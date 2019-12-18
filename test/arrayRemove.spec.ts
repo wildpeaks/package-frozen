@@ -1,67 +1,66 @@
 /* eslint-env node */
-import {strictEqual, deepStrictEqual} from 'assert';
-import {describe, it} from 'mocha';
-import {arrayRemove} from '../src/frozen';
+import {strictEqual, deepStrictEqual} from "assert";
+import {describe, it} from "mocha";
+import {arrayRemove} from "../src/frozen";
 
-
-describe('arrayRemove', () => {
+describe("arrayRemove", () => {
 	type MyArray = ReadonlyArray<string | number>;
 
-	it('0 (valid)', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("0 (valid)", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayRemove(initial, 0);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, [111, 'TWO'], 'Actual removed the value');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, [111, "TWO"], "Actual removed the value");
 	});
-	it('1 (valid)', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("1 (valid)", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayRemove(initial, 1);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 'TWO'], 'Actual removed the value');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", "TWO"], "Actual removed the value");
 	});
-	it('1 (invalid)', () => {
-		const initial: MyArray = Object.freeze(['zero']);
+	it("1 (invalid)", () => {
+		const initial: MyArray = Object.freeze(["zero"]);
 		const actual: MyArray = arrayRemove(initial, 1);
-		deepStrictEqual(initial, ['zero'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero'], 'Actual still has all values');
+		deepStrictEqual(initial, ["zero"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero"], "Actual still has all values");
 	});
-	it('3 (invalid)', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("3 (invalid)", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayRemove(initial, 3);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO'], 'Actual still has all values');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO"], "Actual still has all values");
 	});
-	it('5 (invalid)', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("5 (invalid)", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayRemove(initial, 5);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO'], 'Actual still has all values');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO"], "Actual still has all values");
 	});
-	it('-1', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("-1", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayRemove(initial, -1);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO'], 'Actual still has all values');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO"], "Actual still has all values");
 	});
-	it('NaN', () => {
-		const initial: MyArray = Object.freeze(['zero', 111, 'TWO']);
+	it("NaN", () => {
+		const initial: MyArray = Object.freeze(["zero", 111, "TWO"]);
 		const actual: MyArray = arrayRemove(initial, NaN);
-		deepStrictEqual(initial, ['zero', 111, 'TWO'], 'Initial remains unchanged');
-		strictEqual(Array.isArray(actual), true, 'Actual is an Array');
-		strictEqual(Object.isFrozen(actual), true, 'Actual is frozen');
-		deepStrictEqual(actual, ['zero', 111, 'TWO'], 'Actual still has all values');
+		deepStrictEqual(initial, ["zero", 111, "TWO"], "Initial remains unchanged");
+		strictEqual(Array.isArray(actual), true, "Actual is an Array");
+		strictEqual(Object.isFrozen(actual), true, "Actual is frozen");
+		deepStrictEqual(actual, ["zero", 111, "TWO"], "Actual still has all values");
 	});
 
 	//-----------------------------------------------------------------------//
