@@ -4,6 +4,17 @@
   "description": "Manipulate frozen Arrays",
   "author": "Cecile Muller",
   "license": "MIT",
+  "keywords": [
+    "wildpeaks",
+    "typescript",
+    "frozen",
+    "immutable"
+  ],
+  "homepage": "https://github.com/wildpeaks/package-frozen#readme",
+  "repository": "https://github.com/wildpeaks/package-frozen",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/package-frozen/issues"
+  },
   "eslintConfig": {
     "extends": "@wildpeaks/typescript"
   },
@@ -27,29 +38,18 @@
   "scripts": {
     "test": "mocha -r register.typescript.js test/*.spec.ts"
   },
-  "repository": "https://github.com/wildpeaks/package-frozen",
-  "keywords": [
-    "wildpeaks",
-    "typescript",
-    "frozen",
-    "immutable"
-  ],
-  "bugs": {
-    "url": "https://github.com/wildpeaks/package-frozen/issues"
-  },
-  "homepage": "https://github.com/wildpeaks/package-frozen#readme",
   "peerDependencies": {
     "typescript": "*"
   },
   "devDependencies": {
     "@types/mocha": "5.2.7",
     "@types/node": "12.12.21",
-    "@wildpeaks/eslint-config-typescript": "8.0.0-alpha7",
+    "@wildpeaks/eslint-config-typescript": "8.0.0-alpha8",
     "@wildpeaks/tsconfig-node": "2.0.0-alpha2",
     "eslint": "6.8.0",
     "mocha": "6.2.2",
     "prettier": "1.19.1",
     "ts-node": "8.5.4",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   }
 }
