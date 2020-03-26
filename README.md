@@ -1,6 +1,6 @@
 # Frozen arrays utilities
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wildpeaks/package-frozen.svg)](https://greenkeeper.io/)
+
 
 Typescript functions to **manipulate [frozen](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) arrays**.
 
