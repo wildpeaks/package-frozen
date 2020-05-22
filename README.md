@@ -1,6 +1,6 @@
 # Frozen arrays utilities
 
-
+![Github Release](https://img.shields.io/github/v/release/wildpeaks/package-frozen.svg?label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=11abfb)
 
 Typescript functions to **manipulate [frozen](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) arrays**.
 
