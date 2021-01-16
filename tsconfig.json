@@ -1,7 +1,3 @@
 {
-	"ts-node": {
-		"skipIgnore": true,
-		"transpileOnly": true
-	},
-	"extends": "@wildpeaks/tsconfig-node"
+	"extends": "@wildpeaks/tsconfig"
 }
