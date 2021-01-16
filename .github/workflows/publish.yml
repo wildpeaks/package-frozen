@@ -87,7 +87,9 @@ jobs:
         asset_content_type: application/gzip
 
     - name: Publish
-      run: npm publish --tag ${{ steps.deployment.outputs.tag }}
+      run: |
+        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+        npm publish --tag ${{ steps.deployment.outputs.tag }}
       env:
         NPM_TOKEN: ${{ secrets.NPM_DEPLOY_KEY }}
 
