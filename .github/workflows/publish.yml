@@ -51,13 +51,11 @@ jobs:
       run: npm run test
 
     - name: Set version
-      working-directory: package
       run: |
         PACKAGE_CONTENTS=$(jq '.version = "${{ github.event.inputs.version }}"' package.json)
         echo $PACKAGE_CONTENTS > package.json
 
     - name: Pack
-      working-directory: package
       run: npm pack
 
     - name: Create Release
@@ -84,12 +82,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.release.outputs.upload_url }}
-        asset_path: ./packages/legacy/wildpeaks-frozen-${{ github.event.inputs.version }}.tgz
+        asset_path: ./wildpeaks-frozen-${{ github.event.inputs.version }}.tgz
         asset_name: package.tgz
         asset_content_type: application/gzip
 
     # - name: Publish
-    #   working-directory: package
     #   run: npm publish --tag ${{ steps.deployment.outputs.tag }}
     #   env:
     #     NPM_TOKEN: ${{ secrets.NPM_DEPLOY_KEY }}

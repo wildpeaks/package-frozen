@@ -1,6 +1,5 @@
 {
   "name": "@wildpeaks/frozen",
-  "version": "2.2.0",
   "description": "Manipulate frozen Arrays",
   "author": "Cecile Muller",
   "license": "MIT",
