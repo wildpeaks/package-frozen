@@ -50,13 +50,10 @@ jobs:
     - name: Test
       run: npm run test
 
-    - name: Set version
+    - name: Package
       run: |
-        PACKAGE_CONTENTS=$(jq '.version = "${{ github.event.inputs.version }}"' package.json)
-        echo $PACKAGE_CONTENTS > package.json
-
-    - name: Pack
-      run: npm pack
+        npm version ${{ github.event.inputs.version }}
+        npm pack
 
     - name: Create Release
       id: release
