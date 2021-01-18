@@ -24,8 +24,7 @@ export function arrayRemove<T>(frozenArray: ReadonlyArray<T>, index: number): Re
  * @param newValue The value to add
  */
 export function arrayUniquePush<T>(frozenArray: ReadonlyArray<T>, newValue: T): ReadonlyArray<T> {
-	// eslint-disable-next-line @typescript-eslint/prefer-includes
-	return frozenArray.indexOf(newValue) === -1 ? arrayPush(frozenArray, newValue) : frozenArray;
+	return frozenArray.includes(newValue) ? frozenArray : arrayPush(frozenArray, newValue);
 }
 
 /**
