@@ -3,6 +3,7 @@
 		"EditorConfig.editorconfig",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
+		"redhat.vscode-yaml",
 		"hbenl.vscode-test-explorer",
 		"hbenl.vscode-mocha-test-adapter"
 	]
