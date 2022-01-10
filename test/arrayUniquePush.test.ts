@@ -1,6 +1,5 @@
-/* eslint-env node */
+/* eslint-env node, mocha */
 import {strictEqual, deepStrictEqual} from "assert";
-import {describe, it} from "mocha";
 import {arrayUniquePush} from "../src/frozen";
 
 describe("arrayUniquePush", () => {
