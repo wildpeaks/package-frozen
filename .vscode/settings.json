@@ -1,16 +1,14 @@
 {
+	"testExplorer.useNativeTesting": true,
 	"mochaExplorer.require": "ts-node/register",
-	"mochaExplorer.files": "test/**/*.test.ts",
+	"mochaExplorer.files": "test/*.test.ts",
 	"eslint.validate": [
 		"typescript"
 	],
 	"files.exclude": {
 		"LICENSE": true,
-		"*.lnk": true,
-		"*.log": true,
 		".editorconfig": true,
 		"package-lock.json": true,
-		"node_modules": true,
-		"*/**/node_modules": false,
+		"node_modules": true
 	}
 }
