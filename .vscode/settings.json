@@ -5,6 +5,9 @@
 	"eslint.validate": [
 		"typescript"
 	],
+	"files.associations": {
+		"tsconfig.json": "jsonc"
+	},
 	"files.exclude": {
 		"LICENSE": true,
 		".editorconfig": true,
